@@ -9,7 +9,7 @@ public class pointCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -20,11 +20,17 @@ public class pointCollision : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-     if (other.gameObject.name != "Plane" && other.gameObject.name != "Cylinder")
+     if (other.gameObject.name != "Plane" && other.gameObject.name != "Polyart_Golem")
      {
      GameObject.Destroy(other.gameObject);
      points = points + 1;
      Debug.Log ("You've got " + points + " points");
      }
+     
+     if (other.gameObject.name == "Polyart_Golem")
+    {
+
+
+    }
     }
 }
